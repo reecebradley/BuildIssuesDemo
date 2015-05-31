@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+//using System.Web.Mvc;
+//using System.Web.Optimization;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -12,7 +14,7 @@ namespace DonglesAreGreatWeb
     {
         protected void Application_Start()
         {
-            DonglesAreGreat.Infrastructure.Mapping.Profiles.Initialize();
+            DonglesAreGreat.Infrastructure.Mapping.AutoMapperConfiguration.Initialize();
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

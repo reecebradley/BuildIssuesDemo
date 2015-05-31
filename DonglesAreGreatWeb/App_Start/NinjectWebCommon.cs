@@ -1,10 +1,3 @@
-using System.Web.Mvc;
-using DonglesAreGreat.Core;
-using DonglesAreGreat.Core.Repositories;
-using DonglesAreGreat.Core.Services;
-using DonglesAreGreat.Infrastructure;
-using Ninject.Web.Mvc;
-
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(DonglesAreGreatWeb.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(DonglesAreGreatWeb.App_Start.NinjectWebCommon), "Stop")]
 
@@ -67,7 +60,7 @@ namespace DonglesAreGreatWeb.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            Registry.RegisterServices(kernel);
+            DonglesAreGreat.Infrastructure.Registry.RegisterServices(kernel);
         }        
     }
 }
