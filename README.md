@@ -62,7 +62,7 @@ Which is called in `NinjectWebCommon.cs` via this:
     }   
 
 Finally, if you build the solution and run the application in debug, you will get this:
-![HomeControllerException](HomeControllerException.jpg "HomeController never was registered.")
+![HomeControllerException](HomeControllerException.JPG "HomeController never was registered.")
 
 __Simple Explanation:__ Ninject could not instantiate the `HomeController` because one of it's dependencies was never constructed.
 
@@ -121,7 +121,7 @@ __Example:__ The Infrastructure project is using AutoMapper to map `DongleEntity
 
 __Some Explanation:__ It appears that `AutoMapper.dll` is designed with the oldest .NET frameworks in mind and `AutoMapper.Net4.dll` provides types that came later (.NET 4+). 
 
-![AutoMapperNet4](AutoMapperNet4.jpg "Platform Specific Code")
+![AutoMapperNet4](AutoMapperNet4.JPG "Platform Specific Code")
 
 As for why the .NET build system behaves differently in a **Clean & Build** vs a **Build**, that has not been discovered.
 
